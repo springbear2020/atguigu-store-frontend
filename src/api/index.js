@@ -7,3 +7,9 @@ export const reqCategoryList = () => request({ url: '/product/getBaseCategoryLis
 export const reqBannerList = () => mock.get('/banner')
 // floor 数据
 export const reqFloorList = () => mock.get('/floor')
+// 搜索商品信息
+export const reqCommoditySearch = (conditions) => request({
+    url: '/list',
+    method: 'post',
+    data: conditions
+})
