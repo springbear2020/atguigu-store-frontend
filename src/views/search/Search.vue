@@ -1,11 +1,15 @@
 <template>
-  <div>搜索</div>
+  <div>
+    <TypeNav></TypeNav>
+  </div>
 </template>
 
 <script>
+import TypeNav from '@/components/TypeNav.vue';
 export default {
   data() {
-    return {};
+    return {
+    TypeNav};
   },
   methods: {},
 };
