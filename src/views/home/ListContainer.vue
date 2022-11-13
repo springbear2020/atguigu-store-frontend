@@ -72,7 +72,7 @@
           </li>
         </ul>
         <div class="ads">
-          <img src="../../assets/images/home/ad1.png"/>
+          <img alt="image" src="../../assets/images/home/ad1.png"/>
         </div>
       </div>
     </div>

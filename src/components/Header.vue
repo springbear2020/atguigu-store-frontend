@@ -13,14 +13,14 @@
           </p>
         </div>
         <div class="typeList">
-          <a href="###">我的订单</a>
-          <a href="###">我的购物车</a>
-          <a href="###">我的尚品汇</a>
-          <a href="###">尚品汇会员</a>
-          <a href="###">企业采购</a>
-          <a href="###">关注尚品汇</a>
-          <a href="###">合作招商</a>
-          <a href="###">商家后台</a>
+          <a href="#">我的订单</a>
+          <a href="#">我的购物车</a>
+          <a href="#">我的尚品汇</a>
+          <a href="#">尚品汇会员</a>
+          <a href="#">企业采购</a>
+          <a href="#">关注尚品汇</a>
+          <a href="#">合作招商</a>
+          <a href="#">商家后台</a>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
         </router-link>
       </h1>
       <div class="searchArea">
-        <form action="###" class="searchForm">
+        <form action="#" class="searchForm">
           <input
               type="text"
               id="autocomplete"
@@ -150,7 +150,7 @@ export default {
           box-sizing: border-box;
           width: 490px;
           height: 32px;
-          padding: 0px 4px;
+          padding: 0 4px;
           border: 2px solid #ea4a36;
           float: left;
 
