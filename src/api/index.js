@@ -41,3 +41,30 @@ export const reqUpdateCartCheckStatus = (skuId, isChecked) => request({
     url: `cart/checkCart/${skuId}/${isChecked}`,
     method: 'get'
 })
+// 获取注册验证码
+export const reqGetVerifyCode = (phone) => request({
+    url: `/user/passport/sendCode/${phone}`,
+    method: 'get'
+})
+// 用户注册
+export const reqUserRegister = (user) => request({
+    url: `/user/passport/register`,
+    data: user,
+    method: 'post'
+})
+// 用户登录
+export const reqUserLogin = (user) => request({
+    url: `/user/passport/login`,
+    data: user,
+    method: 'post'
+})
+// 获取用户信息
+export const reqUserInfo = () => request({
+    url: `/user/passport/auth/getUserInfo`,
+    method: 'get'
+})
+// 退出登录
+export const reqLogout = () => request({
+    url: `/user/passport/logout`,
+    method: 'get'
+})

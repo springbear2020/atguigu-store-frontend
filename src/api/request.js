@@ -15,6 +15,11 @@ requests.interceptors.request.use((config) => {
     nprogress.start()
     // 临时用户的 UUID
     config.headers.userTempId = guestUUID()
+    // 用户 token
+    let token
+    if ((token = localStorage.getItem('token')) || (token = sessionStorage.getItem('token'))) {
+        config.headers.token = token
+    }
     return config
 })
 
