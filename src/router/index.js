@@ -76,17 +76,38 @@ let router = new VueRouter({
         {
             path: '/order/trade',
             component: () => import('@/views/order/Trade'),
-            meta: {footerShow: false}
+            meta: {footerShow: false},
+            beforeEnter(to, from, next) {
+                // 只能从购物车【结算】进入订单交易页
+                if (from.path === '/cart') {
+                    next()
+                }
+                next(false)
+            }
         },
         {
             path: '/order/pay',
             component: () => import('@/views/order/Pay'),
-            meta: {footerShow: false}
+            meta: {footerShow: false},
+            beforeEnter(to, from, next) {
+                // 只能从交易页【支付】进入支付页
+                if (from.path === '/order/trade') {
+                    next()
+                }
+                next(false)
+            }
         },
         {
             path: '/order/pay/success',
             component: () => import('@/views/order/PaySuccess'),
-            meta: {footerShow: false}
+            meta: {footerShow: false},
+            beforeEnter(to, from, next) {
+                // 只能从支付页进入支付成功页
+                if (from.path === '/order/pay') {
+                    next()
+                }
+                next(false)
+            }
         },
         {
             path: '/order/personal',
